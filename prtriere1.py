@@ -1,28 +1,19 @@
+def getSum(n):
+    sum = 0
+    while (n != 0):
+        sum = sum + int(n % 10)
+        n = int(n/10)
+    return sum
+
 n = int(input("n = "))
-m = int(input("m = "))
-i = int(input("i = "))
-k = int(input("k = "))
-def sumacifrelor(num):
-    s = 0
-    while (num!=0):
-        s = s + num%10
-        num = num/10
-    return s
+m = int(input("m (suma) = "))
+multimea = range(0, n+1)
 
-def solutieposibila(num):
-    if (sumacifrelor(num)==m):
-        return True
-    else:
-        return False
+print("Suma m = ", m)
+print("Multimea: ", multimea)
 
-def prelucraresolutie(num, k):
-    print(num)
-    k+=1
-
-print("n = ", n)
-print("m = ", m)
-for i in range(1, n):
-    if (solutieposibila(i)):
-        prelucraresolutie(i, k)
-    if k == 0:
-        print("Nu exista")
+k=0
+for i in range(0, len(multimea)):
+    if getSum(multimea[i]) == m:
+        k+=1
+print("Cate numere din aceasta multime suma cifrelor fiecarui numar fiind egal cu m: ", k)
