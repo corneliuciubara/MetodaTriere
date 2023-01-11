@@ -9,7 +9,7 @@ def solpos(a,b,c,d,e):
 def prelucraresol(a,b,c,d,e):
     summin = -1
     sum = valoarea[0]*a+valoarea[1]*b+valoarea[2]*c+valoarea[3]*d+valoarea[4]*e
-    if sum >summin
+    if sum >summin:
         summin = sum
     if summin==-1:
         summin=sum 
@@ -22,4 +22,4 @@ for a in range(0, n):
             for d in range(0, n):
                 for e in range(0, n):
                     if solpos(a,b,c,d,e):
-                        prelsol(a,b,c,d,e)
+                        prelucraresol(a,b,c,d,e)
